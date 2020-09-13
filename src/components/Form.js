@@ -19,9 +19,10 @@ function Form(props) {
         //Clear state string data
         props.setInputText('')
     }
+    //value={props.inputText} clears the form data
     return(
         <form>
-            <input onChange={inputTextHandler} type="text" className="todo-input" />
+            <input value={props.inputText} onChange={inputTextHandler} type="text" className="todo-input" />
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i>
             </button>
