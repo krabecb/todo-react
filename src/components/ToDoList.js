@@ -2,7 +2,7 @@ import React from 'react'
 //Import Components
 import Todo from './Todo'
 
-const ToDoList = ({todos}) => {
+const ToDoList = ({todos, setTodos}) => {
     //When user provides input and submits, the console log shows what props.todos looks like and how
     //we can grab that information
     // console.log(props.todos) 
@@ -12,7 +12,7 @@ const ToDoList = ({todos}) => {
         <div className="todo-container">
             <ul className="todo-list">
                 {todos.map((todo) => (
-                    <Todo key={todo.id} text={todo.text} />
+                    <Todo setTodos={setTodos} todos={todos} todo={todo} key={todo.id} text={todo.text} />
                 ))}
             </ul>
         </div>
